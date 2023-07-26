@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-// import bwipjs from 'bwip-js';
+import bwipjs from 'bwip-js';
 
 @Component({
   selector: 'jk-barcode',
@@ -22,15 +22,15 @@ export class JkBarcodeComponent implements AfterViewInit{
    */
   renderBarcode(value: string): void {
     const canvas = this.barcode?.nativeElement;
-    // if (canvas) {
-    //   bwipjs.toCanvas(canvas, {
-    //     bcid: 'datamatrix',
-    //     text: 'test value',
-    //     scale: 10,
-    //     rotate: 0,
-    //     includetext: true,
-    //     textxalign:  'center'
-    //   });
-    //}
+    if (canvas) {
+       bwipjs.toCanvas(canvas, {
+         bcid: 'datamatrix',
+         text: 'test value',
+         scale: 10,
+         rotate: "N",
+         includetext: true,
+         textxalign: 'center'
+       });
+    }
   }
 }

@@ -3,5 +3,6 @@
   "dest": "../../dist/jk-barcode",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["bwip-js"]
 }
